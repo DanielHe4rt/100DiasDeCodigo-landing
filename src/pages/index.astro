@@ -11,9 +11,11 @@ import "~/styles/index.css";
 import Ranking from "../components/ranking.astro";
 
 const { generator, site } = Astro;
-const image = new URL("thumb.png", site);
+const favicon = new URL("logo.svg", site);
+const ogImage = new URL("og-image.jpeg", site);
+const title = "#100DiasDeCodigo: Evolua Programando Diariamente";
 const description =
-  "Programe no mínimo uma hora todos os dias pelos próximos 100 dias.";
+  "Junte-se ao #100DiasDeCodigo! Programe diariamente, construa projetos impactantes para o seu currículo e conecte-se com uma comunidade que incentiva a constante aprendizagem e superação da procrastinação.";
 ---
 
 <!DOCTYPE html>
@@ -21,19 +23,27 @@ const description =
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" href="../src/assets/logo.svg" type="image/svg+xml" />
+    <link rel="icon" href={favicon} type="image/svg+xml" />
     <meta name="generator" content={generator} />
-
-    <title>100DiasDeCodigo</title>
+    <!-- Primary Meta Tags -->
+    <title>#100DiasDeCodigo: Evolua Programando Diariamente</title>
+    <link rel="canonical" href={site} />
+    <meta name="title" content={title} />
     <meta name="description" content={description} />
 
-    <!-- social media -->
-    <meta property="og:title" content="Astro" />
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:description" content={description} />
-    <meta property="og:image" content={image} />
     <meta property="og:url" content={site} />
-    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={title} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={ogImage} />
 
     <!-- theme -->
     <script is:inline>
