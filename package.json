@@ -25,6 +25,7 @@
     "tailwindcss-fluid-type": "^2.0.3"
   },
   "dependencies": {
+    "@astrojs/vercel": "^3.1.0",
     "@fontsource/inter": "^4.5.14",
     "@tailwindcss/line-clamp": "^0.4.4",
     "@vercel/analytics": "^1.0.2",
