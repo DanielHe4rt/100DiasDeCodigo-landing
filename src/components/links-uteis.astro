@@ -4,6 +4,14 @@ import ContentSection from "../layout/content-section.astro";
 
 const links: Array<LinksUteisItem> = [
   {
+    name: "4noobs",
+    description:
+      "Conteúdos de aprendizado tech feitas pela comunidade tech.",
+    tags: ["Brasileiro", "Back-end", "Front-end", "DevOps"],
+    url: "https://github.com/he4rt/4noobs",
+    thumbnail_url: "https://i.imgur.com/Ty9ELbP.png",
+  },
+  {
     name: "Trilha.info",
     description:
       "Trilhas de aprendizado em programação totalmente em pt-br!",
@@ -36,9 +44,9 @@ const links: Array<LinksUteisItem> = [
   description="Links úteis para quem está começando na área de programação."
   id="Links"
   align="start"
-  extraclass="xl:pl-8 2xl:mx-40"
+  extraclass="xl:pl-8 2xl:mx-20"
 >
-  <div class="grid gap-4 md:grid-cols-2  lg:grid-cols-3">
+  <div class="grid gap-4 md:grid-cols-2  xl:grid-cols-4">
     {
       links.map((link) => (
         <div class="max-w-sm overflow-hidden rounded bg-card shadow-lg ">
