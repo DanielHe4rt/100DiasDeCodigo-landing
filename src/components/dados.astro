@@ -1,0 +1,81 @@
+---
+import ContentSection from "../layout/content-section.astro";
+import type {Dados} from "../types";
+
+const dados: Array<Dados> = [
+    {
+        participantes: "340",
+        tweets: "2.547",
+        curtidas: "22.900",
+        comentarios: "1.845",
+        visualizacoes: "971.931"
+    }
+
+]
+---
+
+<ContentSection
+        title="Participe e faça parte dessa história!"
+        align="center"
+        extraclass="xl:pl-8 2xl:mx-40"
+        id="dados"
+>
+    {
+        dados.map((dado) => (
+                <ul class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 lg:text-center gap-6">
+                    <li>
+                        <div>
+                            <h3>{dado.participantes}</h3>
+                            <p>Participantes</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h3>{dado.tweets}</h3>
+                            <p>Tweets</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h3>{dado.curtidas}</h3>
+                            <p>Curtidas</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h3>{dado.comentarios}</h3>
+                            <p>Comentarios</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h3>{dado.visualizacoes}</h3>
+                            <p>Visualizações</p>
+                        </div>
+                    </li>
+                </ul>
+        ))}
+
+        </ContentSection>
+
+        <style scoped>
+
+
+
+            h3 {
+                color: var(--color-primary);
+                font-weight: bold;
+                font-size: clamp(24px, 5vw, 32px);
+            }
+
+            li {
+                margin-bottom: clamp(50px, 10vw, 100px);
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+            }
+
+            p {
+                color: var(--color-text-default);
+            }
+        </style>
