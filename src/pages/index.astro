@@ -5,6 +5,7 @@ import Footer from "../components/footer.astro";
 import Participar from "../components/participar.astro";
 import Hero from "../components/hero.astro";
 import Menu from "../components/menu.astro";
+import Dados from "../components/dados.astro";
 
 import "@fontsource/inter/variable.css";
 import "~/styles/index.css";
@@ -65,6 +66,9 @@ const description =
   >
     <Menu />
     <Hero />
+    <div id="dados" class="space-y-24 bg-primary px-8 py-32">
+      <Dados />
+    </div>
     <div id="como-participar" class="space-y-24 bg-primary px-8 py-32">
       <Participar />
     </div>

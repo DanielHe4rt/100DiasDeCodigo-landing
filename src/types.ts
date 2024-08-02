@@ -11,6 +11,14 @@ export interface LinksUteisItem {
   tags?: Array<string>;
 }
 
+export interface Dados{
+  participantes: string,
+  tweets: string,
+  curtidas: string,
+  comentarios: string,
+  visualizacoes: string,
+}
+
 export interface BeneficiosItem {
   description: string;
   icon: string;
